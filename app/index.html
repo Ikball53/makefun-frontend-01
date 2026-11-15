@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make.fun · live bounty board</title>
+<meta name="description" content="A fast, unofficial frontend for make.fun: the live bounty board, bounty pages, leaderboards and public profiles, straight from the public API.">
+<meta name="theme-color" content="#0f1014">
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/main.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/">make<span>.fun</span> board</a>
+  <nav class="topnav" aria-label="Sections">
+    <a href="#/" data-nav>Board</a>
+    <a href="#/bounty/makefun-frontend-01" data-nav>This bounty</a>
+  </nav>
+  <form id="jump" class="jump" action="#/profile/">
+    <label class="visually-hidden" for="jump-handle">Profile handle</label>
+    <input id="jump-handle" name="handle" type="search" placeholder="@handle" autocomplete="off" spellcheck="false">
+    <button type="submit">Profile</button>
+  </form>
+</header>
+<main id="view" aria-live="polite"></main>
+<footer class="foot">
+  <span>Unofficial frontend. Data: <a href="https://make.fun">make.fun</a> public API (read-only).</span>
+  <span id="foot-note"></span>
+</footer>
+</body>
+</html>
